@@ -1,21 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deploy-1.2
+  name: iot-app-deploy-1
   labels:
-    app: nginx
+    version: '1'
+    app: iot-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: iot-app
   template:
     metadata:
       labels:
-        app: nginx
+        app: iot-app
     spec:
       containers:
-      - name: nginx-container
-        image: nginx:latest
+      - name: iot-app
+        image: l60039177/lhutt-iot-app1:1.0.0
         ports:
           - containerPort: 80
+            name: iot-app-port
