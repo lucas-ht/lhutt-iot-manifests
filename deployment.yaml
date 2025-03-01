@@ -1,9 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: iot-app-deploy-2
+  name: iot-app-deploy-3
   labels:
-    version: '2'
     app: iot-app
 spec:
   replicas: 3
