@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: iot-app
-        image: l60039177/lhutt-iot-app1:1.0.0
+        image: l60039177/lhutt-iot-app1:2.0.0
         ports:
           - containerPort: 80
             name: iot-app-port
